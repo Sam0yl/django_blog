@@ -6,6 +6,12 @@
     <title>Article</title>
 </head>
 <body>
+    {% if article %}
     {{ article }}
+        {% endif %}
+    {%if tags %}
+        <p>Статья номер {{ article_id }}. Тег {{ tags }}</p>
+    {% endif %}
+    <p></p>
 </body>
 </html>
