@@ -3,3 +3,6 @@ dev:
 
 venv:
 	source $(poetry env info --path)/bin/activate
+
+shell:
+	poetry run python manage.py shell
