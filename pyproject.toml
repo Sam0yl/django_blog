@@ -9,6 +9,7 @@ packages = [{include = "django_blog"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 Django = "^4.2.4"
+python-dotenv = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
