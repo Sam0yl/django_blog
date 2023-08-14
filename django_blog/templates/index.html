@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Hello, {{ who }}!</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Эксперименты с Django{% endblock %}
+
+{% block content %}
+    <h1>{{ who }} first Django blog!</h1>
+{% endblock %}

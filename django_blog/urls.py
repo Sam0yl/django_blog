@@ -19,8 +19,8 @@ from django.urls import path, include, reverse
 from django_blog import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.HomePageView.as_view(), name='homepage'),
     path('articles/', include('django_blog.article.urls')),
-    path('about/', views.about),
+    path('about/', views.about, name='about'),
     path('admin/', admin.site.urls),
 ]

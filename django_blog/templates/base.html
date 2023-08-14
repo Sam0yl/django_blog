@@ -10,12 +10,24 @@
         {% block sidebar %}
             <ul>
                 <li><a href="/">Главная</a></li>
-                <li><a href="/articles/">Статьи</a></li>
-                <li><a href="/about/">О блоге</a></li>
+                <li><a href="{% url 'articles_create' %}">Новая статья</a></li>
+                <li><a href="{% url 'articles' %}">Статьи</a></li>
+                <li><a href="{% url 'about' %}">О блоге</a></li>
             </ul>
         {% endblock %}
     </div>
     <div id="content">
+        <div>
+            {% if messages %}
+                <div>
+                    <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
         {% block content %}{% endblock %}
     </div>
 </body>
